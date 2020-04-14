@@ -12,7 +12,7 @@ var useUppercase = true;
 var useNumbers = true;
 var useCharacters = true;
 var passwordOptions = "";
-passwordLength = prompt("how long should the password be?");
+passwordLength = prompt(`how long should the password be? (8 to 128 characters)`);
 while ((passwordLength < 8) || (passwordLength > 128)) {
   alert("Password must be between 8 and 128 characters long!");
   passwordLength = prompt("How long should the password be?");
