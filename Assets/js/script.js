@@ -12,20 +12,20 @@ var useUppercase = true;
 var useNumbers = true;
 var useCharacters = true;
 var passwordOptions = "";
-passwordLength = prompt(`how long should the password be? (8 to 128 characters)`);
-while ((passwordLength < 8) || (passwordLength > 128)) {
-  alert("Password must be between 8 and 128 characters long!");
-  passwordLength = prompt("How long should the password be?");
-}
-console.log(passwordLength);
-useLowercase = confirm("Do you want to include lowercase characters?");
-console.log(useLowercase);
-useUppercase = confirm("Do you want to include uppercase characters?");
-console.log(useUppercase);
-useNumbers = confirm("Do you want to include numbers?");
-console.log(useNumbers);
-useCharacters = confirm("Do you want to include special characters?");
-console.log(useCharacters);
+// passwordLength = prompt(`how long should the password be? (8 to 128 characters)`);
+// while ((passwordLength < 8) || (passwordLength > 128)) {
+//   alert("Password must be between 8 and 128 characters long!");
+//   passwordLength = prompt("How long should the password be?");
+// }
+// console.log(passwordLength);
+// useLowercase = confirm("Do you want to include lowercase characters?");
+// console.log(useLowercase);
+// useUppercase = confirm("Do you want to include uppercase characters?");
+// console.log(useUppercase);
+// useNumbers = confirm("Do you want to include numbers?");
+// console.log(useNumbers);
+// useCharacters = confirm("Do you want to include special characters?");
+// console.log(useCharacters);
 if (useLowercase) {
   passwordOptions = passwordOptions + charset.lowercase;
 }
@@ -62,5 +62,13 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+$(document).ready(function() {
+
+  const $valueSpan = $('.valueSpan');
+  const $value = $('#slider11');
+  $valueSpan.html($value.val());
+  $value.on('input change', () => {
+
+    $valueSpan.html($value.val());
+  });
+});
