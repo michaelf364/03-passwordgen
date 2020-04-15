@@ -18,27 +18,54 @@
   </header>
   <main class="container bg-primary" id="main">
     <section class="row">
-      <section class="col">
+      <div class="col">
         <h2>Password Generator</h2>
-      </section>
+      </div>
     </section>
     <section class="row">
       <div class="col">
         <section class="h-divider"></section>
       </div>
     </section>
+    <section class="row" id="slider">
+      <div class="col-sm my-4">
+        <form class="range-field">
+          <input id="slider11" class="custom-range" type="range" min="8" max="128" />
+        </form>
+      </div>
+      <div class="col-sm justify-content-left my-4">
+        <span class="font-weight-bold text-secondary ml-2 mt-1 valueSpan"></span>
+      </div>
+    </section>
     <section class="row">
       <div class="col">
-        <div class="row">
-          <div class="d-flex justify-content-center my-4">
-            <form class="range-field w-75">
-              <input id="slider11" class="custom-range" type="range" min="0" max="200" />
-            </form>
-            <span class="font-weight-bold text-secondary ml-2 mt-1 valueSpan"></span>
-         
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="useLowercaseSwitch" checked="">
+          <label class="custom-control-label" for="useLowercaseSwitch">Lowercase Letters</label>
         </div>
-      </section>
+      </div>
+      <div class="col">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="useUppercaseSwitch" checked="">
+          <label class="custom-control-label" for="useUppercaseSwitch">Capital Letters</label>
+        </div>
+      </div>
     </section>
+    <section class="row">
+      <div class="col">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="useNumbersSwitch" checked="">
+          <label class="custom-control-label" for="useNumbersSwitch">Numbers</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input bg-dark" id="useCharactersSwitch" checked="">
+          <label class="custom-control-label" for="useCharactersSwitch">Special Characters</label>
+        </div>
+      </div>
+    </section>
+
   </main>
   <footer class="footer border-top bg-primary">
     <div class="container bg-primary">

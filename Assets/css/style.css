@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
+
 html {
     position: relative;
     min-height: 100%;
@@ -53,13 +54,10 @@ label{
     margin-left: -10px;
     background-color: white;
 }
-img{
-    margin-right: 10px;
-    border-radius: 33%;
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #272B30;
 }
-.card-img-overlay{
-    padding: 0px;
-}
+
 @media (min-width: 980px) {
     main.container{
         max-width: 75%;
