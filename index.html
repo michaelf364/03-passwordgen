@@ -27,44 +27,65 @@
         <section class="h-divider"></section>
       </div>
     </section>
-    <section class="row" id="slider">
-      <div class="col-sm my-4">
-        <form class="range-field">
-          <input id="slider11" class="custom-range" type="range" min="8" max="128" />
-        </form>
-      </div>
-      <div class="col-sm justify-content-left my-4">
-        <span class="font-weight-bold text-secondary ml-2 mt-1 valueSpan"></span>
+    <section class="row">
+      <div class="col">
+        <section class="row" id="slider">
+          <div class="col-sm my-4">
+            <form class="range-field">
+              <input id="passwordLengthSlider" class="custom-range text-secondary" type="range" min="8" max="128" value="8" />
+            </form>
+          </div>
+          <div class="col-sm justify-content-left my-4">
+            <label class="font-weight-bold text-secondary ml-2 mt-1 valueSpan" id="passwordLengthValue"></label>
+          </div>
+        </section>
       </div>
     </section>
     <section class="row">
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
         <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="useLowercaseSwitch" checked="">
+          <input type="checkbox" class="custom-control-input" id="useLowercaseSwitch" checked="true"
+            onclick="useLowercaseSwitch()">
           <label class="custom-control-label" for="useLowercaseSwitch">Lowercase Letters</label>
         </div>
       </div>
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
         <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="useUppercaseSwitch" checked="">
+          <input type="checkbox" class="custom-control-input" id="useUppercaseSwitch" checked="true"
+            onclick="useUppercaseSwitch()">
           <label class="custom-control-label" for="useUppercaseSwitch">Capital Letters</label>
         </div>
       </div>
     </section>
     <section class="row">
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
         <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="useNumbersSwitch" checked="">
+          <input type="checkbox" class="custom-control-input" id="useNumbersSwitch" checked="true"
+            onclick="useNumbersSwitch()">
           <label class="custom-control-label" for="useNumbersSwitch">Numbers</label>
         </div>
       </div>
-      <div class="col">
+      <div class="col-sm-12 col-md-6">
         <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input bg-dark" id="useCharactersSwitch" checked="">
+          <input type="checkbox" class="custom-control-input bg-dark" id="useCharactersSwitch" checked="true"
+            onclick="useCharactersSwitch()">
           <label class="custom-control-label" for="useCharactersSwitch">Special Characters</label>
         </div>
       </div>
     </section>
+    <section class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
+        <textarea class="form-control" readonly id="password" placeholder="Your Secure Password"
+          aria-label="Generated Password"></textarea>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </section>
+
+
 
   </main>
   <footer class="footer border-top bg-primary">

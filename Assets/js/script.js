@@ -1,52 +1,55 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var passwordLength = 0;
 var charset = {
   lowercase: "abcdefghijklmnopqrstuvwxyz",
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers: "0123456789",
   characters: "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 };
-var useLowercase = true;
-var useUppercase = true;
-var useNumbers = true;
-var useCharacters = true;
+var genPassword = "";
 var passwordOptions = "";
-// passwordLength = prompt(`how long should the password be? (8 to 128 characters)`);
-// while ((passwordLength < 8) || (passwordLength > 128)) {
-//   alert("Password must be between 8 and 128 characters long!");
-//   passwordLength = prompt("How long should the password be?");
-// }
-// console.log(passwordLength);
-// useLowercase = confirm("Do you want to include lowercase characters?");
-// console.log(useLowercase);
-// useUppercase = confirm("Do you want to include uppercase characters?");
-// console.log(useUppercase);
-// useNumbers = confirm("Do you want to include numbers?");
-// console.log(useNumbers);
-// useCharacters = confirm("Do you want to include special characters?");
-// console.log(useCharacters);
-if (useLowercase) {
-  passwordOptions = passwordOptions + charset.lowercase;
+var passwordLengthSlider = document.getElementById("passwordLengthSlider");
+var passwordLengthValue = document.getElementById("passwordLengthValue");
+passwordLengthValue.textContent = passwordLengthSlider.value;
+passwordLengthSlider.addEventListener('input', function () {
+  passwordLengthValue.textContent = passwordLengthSlider.value;
+})
+
+function useLowercaseSwitch() {
+  var useLowercase = document.getElementById("useLowercaseSwitch");
+  if (useLowercase.checked) {
+    passwordOptions = passwordOptions + charset.lowercase;
+  }
 }
-if (useUppercase) {
-  passwordOptions = passwordOptions + charset.uppercase;
+function useUppercaseSwitch() {
+  var useUppercase = document.getElementById("useUppercaseSwitch");
+  if (useUppercase.checked) {
+    passwordOptions = passwordOptions + charset.uppercase;
+  }
 }
-if (useNumbers) {
-  passwordOptions = passwordOptions + charset.numbers;
+function useNumbersSwitch() {
+  var useNumbers = document.getElementById("useNumbersSwitch");
+  if (useNumbers.checked) {
+    passwordOptions = passwordOptions + charset.numbers;
+  }
 }
-if (useCharacters) {
-  passwordOptions = passwordOptions + charset.characters;
+function useCharactersSwitch() {
+  var useCharacters = document.getElementById("useCharactersSwitch");
+  if (useCharacters.checked) {
+    passwordOptions = passwordOptions + charset.characters;
+  }
 }
 
-
-console.log(passwordOptions);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
-
-  var genPassword = "";
-  for (let i = 0, n = passwordOptions.length; i < passwordLength; i++) {
+  useLowercaseSwitch();
+  useUppercaseSwitch();
+  useNumbersSwitch();
+  useCharactersSwitch();
+  console.log(passwordOptions);
+  for (let i = 0, n = passwordOptions.length; i < passwordLengthSlider.value; i++) {
     genPassword += passwordOptions.charAt(Math.floor(Math.random() * n));
-
   }
   console.log(genPassword);
   return password = genPassword;
@@ -55,6 +58,8 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
+  passwordOptions = "";
+  genPassword = "";
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -62,13 +67,6 @@ function writePassword() {
 
 }
 
-$(document).ready(function() {
 
-  const $valueSpan = $('.valueSpan');
-  const $value = $('#slider11');
-  $valueSpan.html($value.val());
-  $value.on('input change', () => {
 
-    $valueSpan.html($value.val());
-  });
-});
+
