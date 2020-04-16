@@ -47,11 +47,9 @@ function generatePassword() {
   useUppercaseSwitch();
   useNumbersSwitch();
   useCharactersSwitch();
-  console.log(passwordOptions);
   for (let i = 0, n = passwordOptions.length; i < passwordLengthSlider.value; i++) {
     genPassword += passwordOptions.charAt(Math.floor(Math.random() * n));
   }
-  console.log(genPassword);
   return password = genPassword;
 }
 

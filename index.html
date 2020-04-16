@@ -30,13 +30,14 @@
     <section class="row">
       <div class="col">
         <section class="row" id="slider">
-          <div class="col-sm my-4">
+          <div class="col my-4">
             <form class="range-field">
-              <input id="passwordLengthSlider" class="custom-range text-secondary" type="range" min="8" max="128" value="8" />
+              <input id="passwordLengthSlider" class="custom-range text-secondary" type="range" min="8" max="128"
+                value="8" />
             </form>
           </div>
-          <div class="col-sm justify-content-left my-4">
-            <label class="font-weight-bold text-secondary ml-2 mt-1 valueSpan" id="passwordLengthValue"></label>
+          <div class="col-md-auto col-sm-auto my-4">
+            <label class="font-weight-bold valueSpan" id="passwordLengthValue"></label>
           </div>
         </section>
       </div>
@@ -74,19 +75,16 @@
       </div>
     </section>
     <section class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
-        <textarea class="form-control" readonly id="password" placeholder="Your Secure Password"
+      <div class="col my-2">
+        <textarea class="form-control" readonly id="password" placeholder="Your Secure Password" rows="3"
           aria-label="Generated Password"></textarea>
       </div>
     </section>
     <section class="row">
       <div class="col">
-        <button id="generate" class="btn">Generate Password</button>
+        <button id="generate" class="btn btn-primary">Generate Password</button>
       </div>
     </section>
-
-
-
   </main>
   <footer class="footer border-top bg-primary">
     <div class="container bg-primary">
