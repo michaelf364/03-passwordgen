@@ -20,4 +20,3 @@ This is a responsive website built to host a password generator
 |Small|Medium|Large|
 |---|---|---|
 | ![640-password](./Assets/images/640-password.jpg) | ![640-password](./Assets/Images/640-password.jpg) | ![640-password](./Assets/Images/640-password.jpg) |
-| ![768-contact](./Assets/Images/768-contact.jpg) |
