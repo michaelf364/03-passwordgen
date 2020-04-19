@@ -19,4 +19,4 @@ This is a responsive website built to host a password generator
 ### Screenshots
 |Small|Medium|Large|
 |---|---|---|
-| ![640-password](./Assets/images/640-password.jpg) | ![640-password](./Assets/Images/640-password.jpg) | ![640-password](./Assets/Images/640-password.jpg) |
+| ![640-password](./Assets/images/640-password.jpg) | ![768-password](./Assets/Images/768-password.jpg) | ![940-password](./Assets/Images/940-password.jpg) |
